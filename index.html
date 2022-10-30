@@ -15,12 +15,12 @@
             display: block;
             margin: 2px auto;
             margin-top: 10%;
-            background: rgb(223, 221, 127);
+            background: #89CFFD;
         }
       h1,h2,h3{
         text-align:center;
       }
-      #price{
+      #gram{
         display: block;
         width: 200px;
         margin: auto;
@@ -43,9 +43,9 @@
     <div id="container">
         <h1>Price of 1_KG chicken is 500</h1>
         <br>
-        <h2>Enter price</h2>
+        <h2>Enter weight in Gram</h2>
         <br>
-        <input type="number" id="price" placeholder="Enter Value">
+        <input type="number" id="gram" placeholder="Enter Value">
         <br>
         <br>
         <button onclick="cal()">submit</button>
@@ -56,15 +56,15 @@
 
     <script>
         function cal(){
-            var price = document.getElementById("price").value;
-            var Unit_gram = 2;
-            var Total_gram = Unit_gram*price;
+            var gram = document.getElementById("gram").value;
+            var Unit_price = 0.5;
+            var Total_price = Unit_price*gram;
 
-        if(price<49){
+        if(gram<1){
         alert("price is not accept");
         }
         else{
-            document.getElementById("result").innerHTML = "Total price is "+price+"<br>"+Total_gram+" Gram"
+            document.getElementById("result").innerHTML = gram+" Gram"+"<br>Total_price "+Total_price
         }
 
       
